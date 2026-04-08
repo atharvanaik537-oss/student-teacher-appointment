@@ -1,19 +1,10 @@
 # Student–Teacher Appointment Booking System
 ---
 
-## 🚀 Overview
+## Overview
 The **Student–Teacher Appointment Booking System** is a web-based application designed to simplify communication between students and teachers. It allows students to book appointments with teachers, while teachers can manage and respond to those requests efficiently.
 
 The system provides separate dashboards for students, teachers, and admins, ensuring organized access and role-based functionality.
-
-### ✨ Key Features
-# 📘 Student–Teacher Appointment Booking System
-
-## 🔍 Overview
-
-The **Student–Teacher Appointment Booking System** is a web-based application designed to simplify communication between students and teachers. It allows students to book appointments with teachers, while teachers can manage and respond to those requests efficiently.
-
-The system provides separate dashboards for **students, teachers, and admins**, ensuring organized access and role-based functionality.
 
 ---
 
