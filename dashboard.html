@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - EduBook</title>
+
+  <link rel="stylesheet" href="css/dashboard.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-brand">
+    <i class="fas fa-chalkboard-user"></i> EduBook
+  </div>
+  
+  <div class="nav-links"></div>
+</nav>
+
+<div class="container">
+
+  <div class="booking-card">
+    <h2><i class="fas fa-book-open"></i> Book Appointment</h2>
+
+    <div class="booking-form">
+
+      <div class="input-group">
+        <label>Teacher Name</label>
+        <select id="teacherName">
+          <option value="" disabled selected>Select a Teacher...</option>
+        </select>
+      </div>
+
+      <div class="input-row">
+        <div class="input-group">
+          <label>Date</label>
+          <input type="date" id="appointmentDate">
+        </div>
+
+        <div class="input-group">
+          <label>Time</label>
+          <select id="appointmentTime">
+            <option value="09:00">09:00 AM</option>
+            <option value="10:00">10:00 AM</option>
+            <option value="11:00">11:00 AM</option>
+            <option value="14:00">02:00 PM</option>
+            <option value="15:00">03:00 PM</option>
+            <option value="16:00">04:00 PM</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="input-group">
+        <label>Message to Teacher (Optional)</label>
+        <textarea id="appointmentMessage" rows="2" placeholder="E.g., I need help with Calculus chapter 4..."></textarea>
+      </div>
+
+      <button onclick="bookAppointment()" class="btn-book full-btn">
+        <i class="fas fa-check-circle"></i> Book Appointment
+      </button>
+
+      <div id="bookingMessage" class="message-area"></div>
+    </div>
+  </div>
+
+  <div class="appointments-card">
+
+    <div class="appointments-header">
+      <h3><i class="fas fa-list-check"></i> Appointments</h3>
+      <span id="totalAppointments" class="badge">0</span>
+    </div>
+
+    <div class="filter-bar">
+      <input type="text" id="searchInput" placeholder="🔍 Search teacher..." />
+      <input type="date" id="filterDate" />
+
+      <select id="sortOption">
+        <option value="latest">Latest</option>
+        <option value="earliest">Earliest</option>
+      </select>
+
+      <button onclick="clearAll()" class="clear-btn">
+        <i class="fas fa-xmark"></i>
+      </button>
+    </div>
+
+    <div id="appointmentsList" class="appointments-grid">
+      <div class="empty-state">
+        <i class="fas fa-inbox"></i>
+        <p>No appointments yet</p>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js"></script>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>

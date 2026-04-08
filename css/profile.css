@@ -1,0 +1,60 @@
+/* ================= PROFILE PAGE STYLES ================= */
+.profile-card {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 3rem;
+  margin: 2rem auto;
+  max-width: 600px; /* Keeps the card centered and not too wide */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+.profile-avatar {
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(135deg, #16a34a, #22c55e);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  margin: 0 auto 1.5rem auto;
+  box-shadow: 0 8px 20px rgba(34, 197, 94, 0.3);
+}
+
+.profile-name {
+  font-size: 2rem;
+  color: #1e293b;
+  margin-bottom: 5px;
+}
+
+.profile-email {
+  color: #64748b;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+}
+
+.profile-details {
+  display: flex;
+  justify-content: space-around;
+  background: #f8fafc;
+  padding: 1.5rem;
+  border-radius: 15px;
+  border: 1px solid #e2e8f0;
+}
+
+.detail-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.detail-group label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}

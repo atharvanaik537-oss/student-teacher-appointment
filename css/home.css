@@ -1,0 +1,368 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(135deg, #ecfdf5 0%, #f0fdf4 100%);
+  color: #1e293b;
+  line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 5%;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #16a34a, #22c55e);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.logo i {
+  color: #22c55e;
+  margin-right: 8px;
+}
+
+/* Button */
+.btn-primary {
+  background: linear-gradient(135deg, #16a34a, #22c55e);
+  color: white !important;
+  padding: 0.6rem 1.4rem;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(34, 197, 94, 0.3);
+}
+
+/* Hero */
+.hero {
+  padding: 6rem 5%;
+  text-align: center;
+}
+
+.hero-content {
+  max-width: 750px;
+  margin: auto;
+}
+
+.hero h1 {
+  font-size: 3.2rem;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.gradient {
+  background: linear-gradient(135deg, #16a34a, #22c55e);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  color: #64748b;
+  margin: 1.5rem 0 2rem;
+}
+
+/* Buttons */
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+.btn {
+  padding: 0.8rem 1.8rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.btn-large {
+  background: linear-gradient(135deg, #16a34a, #22c55e);
+  color: white;
+  box-shadow: 0 5px 20px rgba(34, 197, 94, 0.3);
+}
+
+.btn-large:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(34, 197, 94, 0.4);
+}
+
+.btn-outline {
+  border: 2px solid #22c55e;
+  color: #16a34a;
+}
+
+.btn-outline:hover {
+  background: #22c55e;
+  color: white;
+}
+
+/* Stats */
+.hero-stats {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin-top: 3rem;
+}
+
+.stat {
+  text-align: center;
+  color: #475569;
+}
+
+.stat span {
+  display: block;
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #16a34a;
+}
+
+/* Features */
+.features {
+  padding: 5rem 5%;
+}
+
+.features h2 {
+  text-align: center;
+  font-size: 2.3rem;
+  margin-bottom: 3rem;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.feature-card {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 2rem;
+  text-align: center;
+  border: 1px solid #e2e8f0;
+  transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  border-color: #86efac;
+}
+
+.feature-card i {
+  font-size: 2.8rem;
+  color: #22c55e;
+  margin-bottom: 1rem;
+}
+
+.feature-card h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.feature-card p {
+  color: #64748b;
+  font-size: 0.95rem;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 2rem;
+  background: #020617;
+  color: #94a3b8;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-stats {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .navbar {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+/* ================= NAV LINKS & BUTTONS (UPDATED) ================= */
+.nav-links { 
+  display: flex; 
+  gap: 1rem; 
+  align-items: center; /* Perfectly centers the buttons vertically */
+}
+
+/* DEFAULT NO-BORDER BUTTON */
+.nav-btn {
+  padding: 8px 18px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  color: #16a34a;
+  background: transparent;
+  transition: all 0.3s ease;
+  border: none; /* Removes the green outline */
+  cursor: pointer;
+}
+
+/* HOVER EFFECT */
+.nav-btn:hover {
+  background: #dcfce7; 
+}
+
+/* LOGOUT / ACTIVE BUTTON */
+.nav-btn.active {
+  background: #ef4444; /* Red background */
+  color: white !important;
+}
+
+.nav-btn.active:hover {
+  background: #dc2626;
+}
+
+/* ================= DROPDOWN NAVBAR STYLES ================= */
+.dropdown {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  margin-left: 10px; 
+}
+
+/* The name button styling */
+.user-dropdown-btn {
+  color: #16a34a;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 15px;
+  border-radius: 20px;
+  transition: 0.3s;
+  background: #f0fdf4; 
+  border: 1px solid #bbf7d0;
+}
+
+.user-dropdown-btn:hover {
+  background: #dcfce7;
+}
+
+/* The hidden menu - UPDATED FOR SMOOTH FADE */
+.dropdown-content {
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(10px); /* Starts slightly pushed down */
+  position: absolute;
+  right: 0;
+  top: calc(100% + 5px); /* Keeps the visual gap */
+  background-color: #ffffff;
+  min-width: 180px; 
+  box-shadow: 0px 10px 25px rgba(0,0,0,0.1);
+  border-radius: 12px;
+  z-index: 1000;
+  overflow: visible; /* Changed from hidden so the bridge works */
+  border: 1px solid #f1f5f9;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* THE MAGIC FIX: The Invisible Bridge */
+.dropdown-content::before {
+  content: '';
+  position: absolute;
+  top: -15px; 
+  left: 0;
+  right: 0;
+  height: 15px;
+  background: transparent;
+}
+
+/* Show the menu on hover - UPDATED FOR SMOOTH FADE */
+.dropdown:hover .dropdown-content {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0); /* Slides up smoothly into place */
+}
+
+/* Dropdown links and buttons */
+.dropdown-content a,
+.dropdown-content button {
+  color: #475569;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+  box-sizing: border-box; 
+}
+
+/* First item gets rounded top corners for hover effect */
+.dropdown-content a:first-child {
+  border-radius: 12px 12px 0 0;
+}
+
+/* Last item gets rounded bottom corners for hover effect */
+.dropdown-content button:last-child {
+  border-radius: 0 0 12px 12px;
+}
+
+/* Add a bottom border to the profile link to separate it from logout */
+.dropdown-content a {
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.dropdown-content a:hover {
+  background-color: #f8fafc;
+  color: #16a34a;
+}
+
+/* Make the logout button red on hover */
+.dropdown-content button.logout-item:hover {
+  background-color: #fee2e2;
+  color: #dc2626;
+}

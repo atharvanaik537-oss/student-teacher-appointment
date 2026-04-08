@@ -1,0 +1,429 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BODY */
+body {
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(135deg, #ecfdf5, #f0fdf4);
+  color: #1e293b;
+}
+
+/* ================= NAVBAR STYLES ================= */
+.nav {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  padding: 1rem 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-brand {
+  font-size: 1.6rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #16a34a, #22c55e);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.nav-brand i {
+  color: #22c55e;
+  margin-right: 8px;
+}
+
+.nav-links { 
+  display: flex; 
+  gap: 1rem; 
+  align-items: center; 
+}
+
+.nav-btn {
+  padding: 8px 18px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  color: #16a34a;
+  background: transparent;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.nav-btn:hover {
+  background: #dcfce7; 
+}
+
+.nav-btn.active {
+  background: #ef4444; 
+  color: white !important;
+}
+
+.nav-btn.active:hover {
+  background: #dc2626;
+}
+
+/* ================= DASHBOARD LAYOUT ================= */
+.container {
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+}
+
+.booking-card,
+.appointments-card {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.booking-card h2,
+.appointments-card h3 {
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* FORMS */
+.booking-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.input-group label {
+  font-weight: 600;
+  color: #475569;
+  font-size: 0.9rem;
+}
+
+/* Inputs, Selects, and Textareas */
+.input-group input,
+.input-group select,
+.input-group textarea {
+  padding: 0.9rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 10px;
+  transition: 0.3s;
+  background: #f8fafc;
+  font-family: 'Inter', sans-serif;
+  resize: vertical; 
+}
+
+.input-group input:focus,
+.input-group select:focus,
+.input-group textarea:focus {
+  outline: none;
+  border-color: #22c55e;
+  background: white;
+}
+
+.input-row {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-book {
+  background: linear-gradient(135deg, #16a34a, #22c55e);
+  color: white;
+  border: none;
+  padding: 1rem;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-book:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(34, 197, 94, 0.3);
+}
+
+.full-btn {
+  width: 100%;
+}
+
+/* APPOINTMENTS HEADER & FILTER */
+.appointments-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.badge {
+  background: #22c55e;
+  color: white;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+.filter-bar {
+  display: flex;
+  gap: 10px;
+  margin: 15px 0;
+  flex-wrap: wrap;
+}
+
+.filter-bar input,
+.filter-bar select {
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  flex: 1;
+  font-family: 'Inter', sans-serif;
+}
+
+.clear-btn {
+  background: #ef4444;
+  color: white;
+  border: none;
+  padding: 0 15px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* GRID & CARDS */
+.appointments-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 15px;
+}
+
+.appointment-item {
+  background: #ffffff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  transition: 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid #f1f5f9;
+}
+
+.appointment-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+.appointment-info h4 {
+  margin-bottom: 5px;
+  color: #0f172a;
+}
+
+.appointment-info p {
+  font-size: 14px;
+  color: #64748b;
+  margin-bottom: 10px;
+}
+
+/* BUTTON GROUP & TEACHER BUTTONS */
+.btn-group {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px; 
+}
+
+.cancel-btn {
+  background: #fee2e2;
+  color: #dc2626;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+  flex: 1; 
+}
+
+.cancel-btn:hover {
+  background: #dc2626;
+  color: white;
+}
+
+.approve-btn {
+  background: #dcfce7;
+  color: #16a34a;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+  flex: 1; 
+}
+
+.approve-btn:hover {
+  background: #16a34a;
+  color: white;
+}
+
+/* EMPTY STATE */
+.empty-state {
+  text-align: center;
+  padding: 30px;
+  color: #94a3b8;
+  grid-column: 1 / -1; 
+}
+
+.empty-state i {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #cbd5e1;
+}
+
+/* MESSAGES */
+.success-message {
+  background: #dcfce7;
+  color: #15803d;
+  padding: 0.7rem;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.error-message {
+  background: #fee2e2;
+  color: #dc2626;
+  padding: 0.7rem;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.error-message:empty, .success-message:empty { 
+  display: none; 
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  .input-row {
+    flex-direction: column;
+  }
+}
+
+/* ================= DROPDOWN NAVBAR STYLES ================= */
+.dropdown {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  margin-left: 10px; 
+}
+
+/* The name button styling */
+.user-dropdown-btn {
+  color: #16a34a;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 15px;
+  border-radius: 20px;
+  transition: 0.3s;
+  background: #f0fdf4; 
+  border: 1px solid #bbf7d0;
+}
+
+.user-dropdown-btn:hover {
+  background: #dcfce7;
+}
+
+/* The hidden menu - UPDATED FOR SMOOTH FADE */
+.dropdown-content {
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(10px); /* Starts slightly pushed down */
+  position: absolute;
+  right: 0;
+  top: calc(100% + 5px); /* Keeps the visual gap */
+  background-color: #ffffff;
+  min-width: 180px; 
+  box-shadow: 0px 10px 25px rgba(0,0,0,0.1);
+  border-radius: 12px;
+  z-index: 1000;
+  overflow: visible; /* Changed from hidden so the bridge works */
+  border: 1px solid #f1f5f9;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* THE MAGIC FIX: The Invisible Bridge */
+.dropdown-content::before {
+  content: '';
+  position: absolute;
+  top: -15px; 
+  left: 0;
+  right: 0;
+  height: 15px;
+  background: transparent;
+}
+
+/* Show the menu on hover - UPDATED FOR SMOOTH FADE */
+.dropdown:hover .dropdown-content {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0); /* Slides up smoothly into place */
+}
+
+/* Dropdown links and buttons */
+.dropdown-content a,
+.dropdown-content button {
+  color: #475569;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+  box-sizing: border-box; 
+}
+
+/* First item gets rounded top corners for hover effect */
+.dropdown-content a:first-child {
+  border-radius: 12px 12px 0 0;
+}
+
+/* Last item gets rounded bottom corners for hover effect */
+.dropdown-content button:last-child {
+  border-radius: 0 0 12px 12px;
+}
+
+/* Add a bottom border to the profile link to separate it from logout */
+.dropdown-content a {
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.dropdown-content a:hover {
+  background-color: #f8fafc;
+  color: #16a34a;
+}
+
+/* Make the logout button red on hover */
+.dropdown-content button.logout-item:hover {
+  background-color: #fee2e2;
+  color: #dc2626;
+}

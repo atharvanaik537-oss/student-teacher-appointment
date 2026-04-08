@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EduBook - Smart Teacher Appointments</title>
+  <link rel="stylesheet" href="css/home.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="logo">
+    <i class="fas fa-chalkboard-user"></i> EduBook
+  </div>
+  <div class="nav-links"></div>
+</nav>
+
+<section class="hero">
+  <div class="hero-content">
+    <h1>Book Teacher <span class="gradient">Appointments</span> Easily</h1>
+    <p>Manage your time efficiently with our smart scheduling system. Connect with expert teachers in seconds.</p>
+    <div class="hero-buttons">
+      <a href="javascript:void(0)" onclick="goToDashboard()" class="btn btn-large">
+        Get Started <i class="fas fa-arrow-right"></i>
+      </a>
+      <a href="#features" class="btn btn-large" style="background: transparent; color: #16a34a; border: 2px solid #22c55e;">
+        Learn More
+      </a>
+    </div>
+  </div>
+  <div class="hero-stats">
+    <div class="stat"><span>500+</span> Teachers</div>
+    <div class="stat"><span>10k+</span> Appointments</div>
+    <div class="stat"><span>98%</span> Satisfaction</div>
+  </div>
+</section>
+
+<section id="features" class="features">
+  <h2>Why Choose <span class="gradient">EduBook?</span></h2>
+  <div class="features-grid">
+    <div class="feature-card">
+      <i class="fas fa-calendar-check"></i>
+      <h3>Easy Booking</h3>
+      <p>Book appointments in just a few clicks with our intuitive interface</p>
+    </div>
+    <div class="feature-card">
+      <i class="fas fa-chalkboard-user"></i>
+      <h3>Expert Teachers</h3>
+      <p>Connect with verified, experienced educators across all subjects</p>
+    </div>
+    <div class="feature-card">
+      <i class="fas fa-comment-dots"></i>
+      <h3>Instant Messaging</h3>
+      <p>Communicate directly with teachers before your session</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2025 EduBook. All rights reserved. | Empowering education through technology</p>
+</footer>
+
+<script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js"></script>
+
+<script src="js/script.js"></script>
+</body>
+</html>

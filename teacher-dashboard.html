@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teacher Dashboard - EduBook</title>
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-brand">
+    <i class="fas fa-chalkboard-user"></i> EduBook <span style="color:#64748b; font-size:1.2rem;">| Teacher Panel</span>
+  </div>
+  <div class="nav-links"></div>
+</nav>
+
+<div class="container">
+
+  <div class="appointments-card" style="border-left: 5px solid #f59e0b;">
+    <div class="appointments-header">
+      <h3><i class="fas fa-bell" style="color:#f59e0b;"></i> Pending Appointment Requests</h3>
+    </div>
+    <div id="teacherPendingList" class="appointments-grid">
+      <div class="empty-state">
+        <i class="fas fa-inbox"></i>
+        <p>No pending requests right now</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="appointments-card" style="border-left: 5px solid #16a34a;">
+    <div class="appointments-header">
+      <h3><i class="fas fa-calendar-check"></i> My Approved Schedule</h3>
+    </div>
+    <div id="teacherApprovedList" class="appointments-grid">
+      <div class="empty-state">
+        <i class="fas fa-inbox"></i>
+        <p>No upcoming appointments</p>
+      </div>
+    </div>
+  </div>
+
+<div class="appointments-card">
+    <div class="appointments-header">
+      <h3><i class="fas fa-envelope" style="color:#0ea5e9;"></i> Student Messages</h3>
+    </div>
+    
+    <div id="teacherMessagesList" class="appointments-grid">
+      <div class="empty-state">
+        <i class="fas fa-comments" style="color:#e2e8f0;"></i>
+        <p>No new messages</p>
+      </div>
+    </div>
+    
+  </div>
+
+<script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js"></script>
+
+<script src="js/script.js"></script>
+</body>
+</html>

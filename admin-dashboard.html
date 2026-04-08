@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard - EduBook</title>
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-brand">
+    <i class="fas fa-chalkboard-user"></i> EduBook <span style="color:#64748b; font-size:1.2rem;">| Admin Panel</span>
+  </div>
+  <div class="nav-links"></div>
+</nav>
+
+<div class="container">
+
+  <div class="booking-card">
+    <h2><i class="fas fa-user-tie"></i> Add New Teacher</h2>
+
+    <div class="booking-form">
+      <div class="input-row">
+        <div class="input-group">
+          <label>Full Name</label>
+          <input type="text" id="adminTeacherName" placeholder="e.g., Prof. Alan Turing">
+        </div>
+        <div class="input-group">
+          <label>Department / Subject</label>
+          <input type="text" id="adminTeacherSubject" placeholder="e.g., Computer Science">
+        </div>
+      </div>
+
+      <div class="input-row">
+        <div class="input-group">
+          <label>Email Address</label>
+          <input type="email" id="adminTeacherEmail" placeholder="teacher@edubook.com" oninput="this.value = this.value.toLowerCase()">
+        </div>
+        <div class="input-group">
+          <label>Temporary Password</label>
+          <input type="password" id="adminTeacherPassword" placeholder="Minimum 6 characters">
+        </div>
+      </div>
+
+      <button onclick="adminAddTeacher()" class="btn-book full-btn" style="background: linear-gradient(135deg, #0ea5e9, #3b82f6);">
+        <i class="fas fa-plus-circle"></i> Create Teacher Account
+      </button>
+
+      <div id="adminMessage" class="message-area" style="margin-top: 10px;"></div>
+    </div>
+  </div>
+
+  <div class="appointments-card" style="border-left: 5px solid #3b82f6;">
+    <div class="appointments-header">
+      <h3><i class="fas fa-users-gear" style="color:#3b82f6;"></i> Manage Teachers</h3>
+      <span id="totalTeachers" class="badge" style="background:#3b82f6;">0</span>
+    </div>
+    <div id="adminTeacherList" class="appointments-grid">
+      </div>
+  </div>
+
+  <div class="appointments-card" style="border-left: 5px solid #8b5cf6;">
+    <div class="appointments-header">
+      <h3><i class="fas fa-user-graduate" style="color:#8b5cf6;"></i> Registered Students</h3>
+      <span id="totalStudents" class="badge" style="background:#8b5cf6;">0</span>
+    </div>
+    <div id="adminStudentList" class="appointments-grid">
+      </div>
+  </div>
+
+</div>
+
+<script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
